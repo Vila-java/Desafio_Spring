@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6acb7d7-290d-45bc-9216-bc1a948b4e4f" name="Changes" comment="Add DTO, Model">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_desafio/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_desafio/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_desafio/dto/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_desafio/dto/ProductDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_desafio/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_desafio/repositories/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_desafio/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_desafio/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring_desafio/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring_desafio/services/ProductServiceImpl.java" afterDir="false" />
@@ -35,6 +33,29 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/Cadastrar_Produtos" />
+                    <option name="lastUsedInstant" value="1657218976" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1657218975" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -80,13 +101,13 @@
     </configuration>
     <configuration name="SpringDesafioApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Desafio_Spring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.spring_desafio.SpringDesafioApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.spring_desafio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.spring_desafio.SpringDesafioApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,7 +173,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add gitignore" />

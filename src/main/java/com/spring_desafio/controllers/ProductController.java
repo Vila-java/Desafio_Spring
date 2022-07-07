@@ -1,13 +1,11 @@
 package com.spring_desafio.controllers;
 
 import com.spring_desafio.dto.ProductDTO;
+import com.spring_desafio.models.ProductModel;
 import com.spring_desafio.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -43,5 +41,12 @@ public class ProductController {
         return ResponseEntity.ok(productList);
 
     }
+
+    @PostMapping
+    public ResponseEntity<List<ProductDTO>> createProducts(@RequestBody List<ProductModel> newProductsList) {
+        List<ProductDTO> productDTOList = productService.createProducts(newProductsList);
+        return ResponseEntity.ok(productDTOList);
+    }
+
 }
 
