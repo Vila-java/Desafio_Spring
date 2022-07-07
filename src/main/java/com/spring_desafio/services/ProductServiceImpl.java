@@ -12,8 +12,16 @@ import java.util.stream.Collectors;
 @Service
 public class ProductServiceImpl implements ProductService{
 
+
     @Autowired
     private ProductRepository productRepository;
+
+
+    @Override
+    public List<ProductDTO> getAllProducts() {
+        List<ProductDTO> productList = productRepository.getAllProducts().stream().map(ProductDTO::new).collect(Collectors.toList());
+        return productList;
+    }
 
     @Override
     public List<ProductDTO> getAllProductsByCategory(String category) {
@@ -42,5 +50,6 @@ public class ProductServiceImpl implements ProductService{
                             .map(ProductDTO::new)
                             .collect(Collectors.toList());
                 }
+
 }
 

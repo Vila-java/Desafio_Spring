@@ -11,19 +11,21 @@ import java.util.List;
 @Repository
 public class ProductRepository {
 
-    private final String FILE = "src/main/resources/data/products.json";
 
-    public List<ProductModel> getAllProducts(){
+    private final String LINK_FILE = "src/main/resources/data/products.json";
+
+    public List<ProductModel> getAllProducts() {
         ObjectMapper mapper = new ObjectMapper();
         List<ProductModel> productModelList = null;
 
         try {
             productModelList = Arrays.asList
-                    (mapper.readValue(new File(FILE), ProductModel[].class));
-        }catch (Exception ex){
-            System.out.println("Error in the file " + FILE);
+                    (mapper.readValue(new File(LINK_FILE), ProductModel[].class));
+        } catch (Exception ex) {
+            System.out.println("Error in the file " + LINK_FILE);
         }
 
         return productModelList;
+
     }
 }

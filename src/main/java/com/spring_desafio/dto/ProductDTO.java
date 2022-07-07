@@ -24,5 +24,4 @@ public class ProductDTO {
 		this.freeShipping = productModel.isFreeShipping();
 		this.price = productModel.getPrice();
 	}
-
 }

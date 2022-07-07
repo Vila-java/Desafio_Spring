@@ -19,19 +19,29 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/{category}")
-    public ResponseEntity<List<ProductDTO>> getAllProductsByCategory(@PathVariable String category){
+    public ResponseEntity<List<ProductDTO>> getAllProductsByCategory(@PathVariable String category) {
         List<ProductDTO> list = productService.getAllProductsByCategory(category);
         return ResponseEntity.ok(list);
     }
+
     @GetMapping("/freeShipping/{freeShipping}")
-    public ResponseEntity<List<ProductDTO>> getAllProductsByFreeShipping(@PathVariable Boolean freeShipping){
+    public ResponseEntity<List<ProductDTO>> getAllProductsByFreeShipping(@PathVariable Boolean freeShipping) {
         List<ProductDTO> list = productService.getAllProductsByFreeShipping(freeShipping);
         return ResponseEntity.ok(list);
     }
 
     @GetMapping("/c/{category}/{freeShipping}")
-    public ResponseEntity<List<ProductDTO>> getAllProductsByCaterogyAndFreeShipping(@PathVariable String category, @PathVariable Boolean freeShipping){
+    public ResponseEntity<List<ProductDTO>> getAllProductsByCaterogyAndFreeShipping(@PathVariable String category,
+        @PathVariable Boolean freeShipping) {
         List<ProductDTO> list = productService.getAllProductsByCaterogyAndFreeShipping(category, freeShipping);
         return ResponseEntity.ok(list);
     }
+
+    @GetMapping
+    public ResponseEntity<List<ProductDTO>> getAllProducts() {
+        List<ProductDTO> productList = productService.getAllProducts();
+        return ResponseEntity.ok(productList);
+
+    }
 }
+
