@@ -28,4 +28,10 @@ public class ProductController {
         List<ProductDTO> list = productService.getAllProductsByFreeShipping(freeShipping);
         return ResponseEntity.ok(list);
     }
+
+    @GetMapping("/c/{category}/{freeShipping}")
+    public ResponseEntity<List<ProductDTO>> getAllProductsByCaterogyAndFreeShipping(@PathVariable String category, @PathVariable Boolean freeShipping){
+        List<ProductDTO> list = productService.getAllProductsByCaterogyAndFreeShipping(category, freeShipping);
+        return ResponseEntity.ok(list);
+    }
 }
