@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 @Service
 public class ProductServiceImpl implements ProductService{
 
-
     @Autowired
     private ProductRepository productRepository;
 
@@ -22,6 +21,7 @@ public class ProductServiceImpl implements ProductService{
         List<ProductDTO> productList = productRepository.getAllProducts().stream().map(ProductDTO::new).collect(Collectors.toList());
         return productList;
     }
+
 
     @Override
     public List<ProductDTO> getAllProductsByCategory(String category) {
@@ -51,5 +51,22 @@ public class ProductServiceImpl implements ProductService{
                             .collect(Collectors.toList());
                 }
 
-}
+    @Override
+    public List<ProductDTO> getAllProductsByPrestige(String prestige) {
+        List<ProductModel> productsList = productRepository.getAllProducts();
+        return productsList.stream()
+                .filter(p -> p.getPrestige().equalsIgnoreCase(prestige))
+                .map(ProductDTO::new)
+                .collect(Collectors.toList());
+    }
 
+    @Override
+    public List<ProductDTO> getAllProductsByFreeShippingAndPrestige(Boolean freeShipping, String prestige) {
+        List<ProductModel> productsList = productRepository.getAllProducts();
+        return productsList.stream()
+                .filter((p)-> freeShipping.equals(p.isFreeShipping()) &&
+                        p.getPrestige().equalsIgnoreCase(prestige))
+                .map(ProductDTO::new)
+                .collect(Collectors.toList());
+    }
+}
