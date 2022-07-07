@@ -7,11 +7,9 @@ import com.spring_desafio.models.ProductModel;
 import java.util.List;
 
 public interface ProductService {
-    List<ProductDTO> getAllProductsByCategory(String category);
-    List<ProductDTO> getAllProductsByFreeShipping(Boolean freeShipping);
-    List<ProductDTO> getAllProductsByCaterogyAndFreeShipping(String category,Boolean freeShipping);
-    List<ProductDTO> getAllProducts();
+    List<ProductDTO> getProductsByCategory(List<ProductDTO> productDTOList, String category);
+    List<ProductDTO> getProductsByFreeShipping(List<ProductDTO> productDTOList, Boolean freeShipping);
+    List<ProductDTO> getProductsByPrestige(List<ProductDTO> productDTOList, String prestige);
+    List<ProductDTO> getProducts();
     List<ProductDTO> createProducts(List<ProductModel> productsList);
-    List<ProductDTO> getAllProductsByPrestige(String prestige);
-    List<ProductDTO> getAllProductsByFreeShippingAndPrestige(Boolean freeShipping, String prestige);
 }

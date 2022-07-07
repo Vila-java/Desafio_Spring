@@ -15,70 +15,53 @@ public class ProductServiceImpl implements ProductService{
     @Autowired
     private ProductRepository productRepository;
 
-
     @Override
-    public List<ProductDTO> getAllProducts() {
+    public List<ProductDTO> getProducts() {
         List<ProductDTO> productList = productRepository
-                .getAllProducts()
+                .getProducts()
                 .stream()
                 .map(ProductDTO::new)
                 .collect(Collectors.toList());
         return productList;
     }
 
-
     @Override
-    public List<ProductDTO> getAllProductsByCategory(String category) {
-        List<ProductModel> productsList = productRepository.getAllProducts();
-        return productsList.stream()
-                .filter(p -> p.getCategory().equalsIgnoreCase(category))
-                .map(ProductDTO::new)
-                .collect(Collectors.toList());
+    public List<ProductDTO> getProductsByCategory(List<ProductDTO> productDTOList, String category) {
+        if(category != null) {
+            return productDTOList.stream()
+                    .filter(p -> p.getCategory().equalsIgnoreCase(category))
+                    .collect(Collectors.toList());
+        } else {
+            return productDTOList;
+        }
     }
 
     @Override
-    public List<ProductDTO> getAllProductsByFreeShipping(Boolean freeShipping) {
-        List<ProductModel> productsList = productRepository.getAllProducts();
-        return productsList.stream()
-                            .filter((p)-> freeShipping.equals(p.isFreeShipping()))
-                            .map(ProductDTO::new)
-                            .collect(Collectors.toList());
+    public List<ProductDTO> getProductsByFreeShipping(List<ProductDTO> productDTOList, Boolean freeShipping) {
+        if(freeShipping != null) {
+            return productDTOList.stream()
+                    .filter((p)-> freeShipping.equals(p.isFreeShipping()))
+                    .collect(Collectors.toList());
+        } else {
+            return productDTOList;
+        }
     }
 
     @Override
-    public List<ProductDTO> getAllProductsByCaterogyAndFreeShipping(String category,Boolean freeShipping) {
-        List<ProductModel> productsList = productRepository.getAllProducts();
-        return productsList.stream()
-                            .filter((p)-> freeShipping.equals(p.isFreeShipping()) &&
-                             p.getCategory().equalsIgnoreCase(category))
-                            .map(ProductDTO::new)
-                            .collect(Collectors.toList());
+    public List<ProductDTO> getProductsByPrestige(List<ProductDTO> productDTOList, String prestige) {
+        if(prestige != null) {
+            return productDTOList.stream()
+                    .filter(p -> p.getPrestige().equalsIgnoreCase(prestige))
+                    .collect(Collectors.toList());
+        } else {
+            return productDTOList;
+        }
     }
-
 
     @Override
     public List<ProductDTO> createProducts (List<ProductModel> productsList){
         productRepository.createProducts(productsList);
         return productsList.stream()
-                .map(ProductDTO::new)
-                .collect(Collectors.toList());
-    }
-
-    @Override
-    public List<ProductDTO> getAllProductsByPrestige(String prestige) {
-        List<ProductModel> productsList = productRepository.getAllProducts();
-        return productsList.stream()
-                .filter(p -> p.getPrestige().equalsIgnoreCase(prestige))
-                .map(ProductDTO::new)
-                .collect(Collectors.toList());
-    }
-
-    @Override
-    public List<ProductDTO> getAllProductsByFreeShippingAndPrestige(Boolean freeShipping, String prestige) {
-        List<ProductModel> productsList = productRepository.getAllProducts();
-        return productsList.stream()
-                .filter((p)-> freeShipping.equals(p.isFreeShipping()) &&
-                        p.getPrestige().equalsIgnoreCase(prestige))
                 .map(ProductDTO::new)
                 .collect(Collectors.toList());
     }
