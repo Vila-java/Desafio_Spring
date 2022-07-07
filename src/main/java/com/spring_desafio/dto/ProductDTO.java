@@ -1,5 +1,6 @@
 package com.spring_desafio.dto;
 
+import com.spring_desafio.models.ProductModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,13 +15,13 @@ public class ProductDTO {
 	private boolean freeShipping;
 	private double price;
 
-	public ProductDTO(ProductDTO productDTO) {
-		this.name = productDTO.getName();
-		this.category = productDTO.getCategory();
-		this.prestige = productDTO.getPrestige();
-		this.brand = productDTO.getBrand();
-		this.quantity = productDTO.getQuantity();
-		this.freeShipping = productDTO.isFreeShipping();
-		this.price = productDTO.getPrice();
+	public ProductDTO(ProductModel product) {
+		this.name = product.getName();
+		this.category = product.getCategory();
+		this.prestige = product.getPrestige();
+		this.brand = product.getBrand();
+		this.quantity = product.getQuantity();
+		this.freeShipping = product.isFreeShipping();
+		this.price = product.getPrice();
 	}
 }
