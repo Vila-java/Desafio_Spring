@@ -10,8 +10,6 @@ import java.util.List;
 
 @Repository
 public class ProductRepository {
-
-
     private final String LINK_FILE = "src/main/resources/data/products.json";
 
     public List<ProductModel> getAllProducts() {

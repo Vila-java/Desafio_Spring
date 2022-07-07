@@ -1,7 +1,9 @@
 package com.spring_desafio.controllers;
 
 import com.spring_desafio.dto.ProductDTO;
+import com.spring_desafio.models.ProductModel;
 import com.spring_desafio.services.ProductService;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +19,12 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
+
+    @GetMapping
+    public ResponseEntity<List<ProductDTO>> getAllProducts(){
+        List<ProductDTO> productList = productService.getAllProducts();
+        return ResponseEntity.ok(productList);
+    }
 
     @GetMapping("/{category}")
     public ResponseEntity<List<ProductDTO>> getAllProductsByCategory(@PathVariable String category) {
@@ -37,11 +45,4 @@ public class ProductController {
         return ResponseEntity.ok(list);
     }
 
-    @GetMapping
-    public ResponseEntity<List<ProductDTO>> getAllProducts() {
-        List<ProductDTO> productList = productService.getAllProducts();
-        return ResponseEntity.ok(productList);
-
-    }
 }
-
