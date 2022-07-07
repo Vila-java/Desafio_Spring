@@ -6,6 +6,7 @@ import com.spring_desafio.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -56,6 +57,51 @@ public class ProductServiceImpl implements ProductService{
         } else {
             return productDTOList;
         }
+    }
+
+    @Override
+    public List<ProductDTO> chooseOrder(List<ProductDTO> productList, Integer order) {
+        switch (order) {
+            case 0:
+                return this.orderAscByName(productList);
+            case 1:
+                return this.orderDescByName(productList);
+            case 2:
+                return this.orderAscByValue(productList);
+            case 3:
+                return this.orderDescByValue(productList);
+            default:
+                return productList;
+        }
+    }
+
+    @Override
+    public List<ProductDTO> orderAscByName(List<ProductDTO> productList) {
+        return productList.stream()
+                .sorted(Comparator.comparing(ProductDTO::getName))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ProductDTO> orderDescByName(List<ProductDTO> productList) {
+        return productList.stream()
+                .sorted(Comparator.comparing(ProductDTO::getName).reversed())
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ProductDTO> orderAscByValue(List<ProductDTO> productList) {
+        return productList.stream()
+                .sorted(Comparator.comparing(ProductDTO::getPrice) )
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ProductDTO> orderDescByValue(List<ProductDTO> productList) {
+        return productList.stream()
+                .sorted(Comparator.comparing(ProductDTO::getPrice).reversed() )
+                .sorted((product1, product2) -> product1.getPrice() >= product2.getPrice() ? -1 : 1 )
+                .collect(Collectors.toList());
     }
 
     @Override

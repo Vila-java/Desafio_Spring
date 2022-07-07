@@ -12,4 +12,9 @@ public interface ProductService {
     List<ProductDTO> getProductsByPrestige(List<ProductDTO> productDTOList, String prestige);
     List<ProductDTO> getProducts();
     List<ProductDTO> createProducts(List<ProductModel> productsList);
+    List<ProductDTO> chooseOrder(List<ProductDTO> productList, Integer order);
+    List<ProductDTO> orderAscByName(List<ProductDTO> productList);
+    List<ProductDTO> orderDescByName(List<ProductDTO> productList);
+    List<ProductDTO> orderAscByValue(List<ProductDTO> productList);
+    List<ProductDTO> orderDescByValue(List<ProductDTO> productList);
 }
