@@ -18,7 +18,11 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public List<ProductDTO> getAllProducts() {
-        List<ProductDTO> productList = productRepository.getAllProducts().stream().map(ProductDTO::new).collect(Collectors.toList());
+        List<ProductDTO> productList = productRepository
+                .getAllProducts()
+                .stream()
+                .map(ProductDTO::new)
+                .collect(Collectors.toList());
         return productList;
     }
 
@@ -35,21 +39,30 @@ public class ProductServiceImpl implements ProductService{
     @Override
     public List<ProductDTO> getAllProductsByFreeShipping(Boolean freeShipping) {
         List<ProductModel> productsList = productRepository.getAllProducts();
-                return productsList.stream()
+        return productsList.stream()
                             .filter((p)-> freeShipping.equals(p.isFreeShipping()))
                             .map(ProductDTO::new)
                             .collect(Collectors.toList());
-                }
+    }
 
     @Override
     public List<ProductDTO> getAllProductsByCaterogyAndFreeShipping(String category,Boolean freeShipping) {
         List<ProductModel> productsList = productRepository.getAllProducts();
-                return productsList.stream()
+        return productsList.stream()
                             .filter((p)-> freeShipping.equals(p.isFreeShipping()) &&
                              p.getCategory().equalsIgnoreCase(category))
                             .map(ProductDTO::new)
                             .collect(Collectors.toList());
-                }
+    }
+
+
+    @Override
+    public List<ProductDTO> createProducts (List<ProductModel> productsList){
+        productRepository.createProducts(productsList);
+        return productsList.stream()
+                .map(ProductDTO::new)
+                .collect(Collectors.toList());
+    }
 
     @Override
     public List<ProductDTO> getAllProductsByPrestige(String prestige) {
