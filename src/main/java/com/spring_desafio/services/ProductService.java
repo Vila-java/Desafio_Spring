@@ -12,4 +12,6 @@ public interface ProductService {
     List<ProductDTO> getAllProductsByCaterogyAndFreeShipping(String category,Boolean freeShipping);
     List<ProductDTO> getAllProducts();
     List<ProductDTO> createProducts(List<ProductModel> productsList);
+    List<ProductDTO> getAllProductsByPrestige(String prestige);
+    List<ProductDTO> getAllProductsByFreeShippingAndPrestige(Boolean freeShipping, String prestige);
 }

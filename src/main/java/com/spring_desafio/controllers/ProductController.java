@@ -42,6 +42,13 @@ public class ProductController {
 
     }
 
+    @GetMapping("/f/{freeShipping}/{prestige}")
+    public ResponseEntity<List<ProductDTO>> getAllProductsByFreeShippingAndPrestige(@PathVariable Boolean freeShipping,
+        @PathVariable String prestige){
+            List<ProductDTO> list = productService.getAllProductsByFreeShippingAndPrestige(freeShipping, prestige);
+            return ResponseEntity.ok(list);
+    }
+
     @PostMapping
     public ResponseEntity<List<ProductDTO>> createProducts(@RequestBody List<ProductModel> newProductsList) {
         List<ProductDTO> productDTOList = productService.createProducts(newProductsList);
