@@ -18,7 +18,7 @@ public class ProductRepository {
 
     private final String LINK_FILE = "src/main/resources/data/products.json";
 
-    public List<ProductModel> getAllProducts() {
+    public List<ProductModel> getProducts() {
         ObjectMapper mapper = new ObjectMapper();
         List<ProductModel> productModelList = null;
 

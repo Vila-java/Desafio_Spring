@@ -16,37 +16,18 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/{category}")
-    public ResponseEntity<List<ProductDTO>> getAllProductsByCategory(@PathVariable String category) {
-        List<ProductDTO> list = productService.getAllProductsByCategory(category);
-        return ResponseEntity.ok(list);
-    }
-
-    @GetMapping("/freeShipping/{freeShipping}")
-    public ResponseEntity<List<ProductDTO>> getAllProductsByFreeShipping(@PathVariable Boolean freeShipping) {
-        List<ProductDTO> list = productService.getAllProductsByFreeShipping(freeShipping);
-        return ResponseEntity.ok(list);
-    }
-
-    @GetMapping("/c/{category}/{freeShipping}")
-    public ResponseEntity<List<ProductDTO>> getAllProductsByCaterogyAndFreeShipping(@PathVariable String category,
-        @PathVariable Boolean freeShipping) {
-        List<ProductDTO> list = productService.getAllProductsByCaterogyAndFreeShipping(category, freeShipping);
-        return ResponseEntity.ok(list);
-    }
-
     @GetMapping
-    public ResponseEntity<List<ProductDTO>> getAllProducts() {
-        List<ProductDTO> productList = productService.getAllProducts();
-        return ResponseEntity.ok(productList);
-
-    }
-
-    @GetMapping("/f/{freeShipping}/{prestige}")
-    public ResponseEntity<List<ProductDTO>> getAllProductsByFreeShippingAndPrestige(@PathVariable Boolean freeShipping,
-        @PathVariable String prestige){
-            List<ProductDTO> list = productService.getAllProductsByFreeShippingAndPrestige(freeShipping, prestige);
-            return ResponseEntity.ok(list);
+    public ResponseEntity<List<ProductDTO>> getProducts(
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) Boolean freeShipping,
+            @RequestParam(required = false) String prestige,
+            @RequestParam(required = false) Integer order
+    ) {
+        List<ProductDTO> list = productService.getProducts();
+        list = productService.getProductsByCategory(list, category);
+        list = productService.getProductsByFreeShipping(list, freeShipping);
+        list = productService.getProductsByPrestige(list, prestige);
+        return ResponseEntity.ok(list);
     }
 
     @PostMapping
