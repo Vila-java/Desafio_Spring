@@ -22,6 +22,14 @@ public class ProductServiceImpl implements ProductService{
                 .filter(p -> p.getCategory().equalsIgnoreCase(category))
                 .map(ProductDTO::new)
                 .collect(Collectors.toList());
-    }
+    } @Override
+    public List<ProductDTO> getAllProductsByFreeShipping(Boolean freeShipping) {
+        List<ProductModel> productsList = productRepository.getAllProducts();
+//                if(freeShipping == true) {
+                    return productsList.stream()
+                            .filter((p)-> freeShipping.equals(p.isFreeShipping()))
+                            .map(ProductDTO::new)
+                            .collect(Collectors.toList());
+                }
 }
 
