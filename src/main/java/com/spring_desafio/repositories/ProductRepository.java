@@ -10,21 +10,22 @@ import java.util.List;
 
 @Repository
 public class ProductRepository {
+
+
     private final String LINK_FILE = "src/main/resources/data/products.json";
 
-    public List<ProductModel> getAll() {
-
+    public List<ProductModel> getAllProducts() {
         ObjectMapper mapper = new ObjectMapper();
-
-        List<ProductModel> productList = null;
+        List<ProductModel> productModelList = null;
 
         try {
-            productList = Arrays.asList(mapper.readValue(new File(LINK_FILE), ProductModel[].class));
-        }catch (Exception ex) {
-            System.out.println(ex.getMessage());
+            productModelList = Arrays.asList
+                    (mapper.readValue(new File(LINK_FILE), ProductModel[].class));
+        } catch (Exception ex) {
+            System.out.println("Error in the file " + LINK_FILE);
         }
 
-        return productList;
+        return productModelList;
 
     }
 }

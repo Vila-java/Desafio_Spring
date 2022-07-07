@@ -15,13 +15,13 @@ public class ProductDTO {
 	private boolean freeShipping;
 	private double price;
 
-	public ProductDTO(ProductModel product) {
-		this.name = product.getName();
-		this.category = product.getCategory();
-		this.prestige = product.getPrestige();
-		this.brand = product.getBrand();
-		this.quantity = product.getQuantity();
-		this.freeShipping = product.isFreeShipping();
-		this.price = product.getPrice();
+	public ProductDTO(ProductModel productModel) {
+		this.name = productModel.getName();
+		this.category = productModel.getCategory();
+		this.prestige = productModel.getPrestige();
+		this.brand = productModel.getBrand();
+		this.quantity = productModel.getQuantity();
+		this.freeShipping = productModel.isFreeShipping();
+		this.price = productModel.getPrice();
 	}
 }

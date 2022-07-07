@@ -15,6 +15,4 @@ public class OrderModel {
 	private String name, state, postalCode, country;
 	private List<Long> listId;
 
-
-
 }
