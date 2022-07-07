@@ -27,6 +27,7 @@ public class ProductController {
         list = productService.getProductsByCategory(list, category);
         list = productService.getProductsByFreeShipping(list, freeShipping);
         list = productService.getProductsByPrestige(list, prestige);
+        list = productService.chooseOrder(list, order);
         return ResponseEntity.ok(list);
     }
 
