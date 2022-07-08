@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ClientDTO {
 
-	private String name, phoneNumber, emailAddress;
+	private String name, phoneNumber, emailAddress, state;
 
 	/**
 	 * Instantiates a new Client dto.
@@ -30,5 +30,6 @@ public class ClientDTO {
 		this.name = clientModel.getName();
 		this.phoneNumber = clientModel.getPhoneNumber();
 		this.emailAddress = clientModel.getEmailAddress();
+		this.state = clientModel.getState();
 	}
 }

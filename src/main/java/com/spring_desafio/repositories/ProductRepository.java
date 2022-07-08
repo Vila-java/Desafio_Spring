@@ -3,6 +3,7 @@ package com.spring_desafio.repositories;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import com.spring_desafio.exception.InvalidServerException;
 import com.spring_desafio.models.ProductModel;
 import org.springframework.stereotype.Repository;
 
@@ -38,7 +39,7 @@ public class ProductRepository {
             productModelList = Arrays.asList
                     (mapper.readValue(new File(LINK_FILE), ProductModel[].class));
         } catch (Exception ex) {
-            System.out.println("Error in the file " + LINK_FILE);
+            throw new InvalidServerException("Internal  server error");
         }
 
         return productModelList;
@@ -62,7 +63,7 @@ public class ProductRepository {
             copyList.addAll(newProductsList);
             writer.writeValue(new File(LINK_FILE), copyList);
         } catch (Exception ex) {
-
+            throw new InvalidServerException("Internal  server error");
         }
-   }
+    }
 }
