@@ -1,6 +1,7 @@
 package com.spring_desafio.services;
 
 import com.spring_desafio.dto.ProductDTO;
+import com.spring_desafio.dto.ProductRequestDTO;
 import com.spring_desafio.models.ProductModel;
 
 
@@ -17,4 +18,6 @@ public interface ProductService {
     List<ProductDTO> orderDescByName(List<ProductDTO> productList);
     List<ProductDTO> orderAscByValue(List<ProductDTO> productList);
     List<ProductDTO> orderDescByValue(List<ProductDTO> productList);
+    double totalValue(List<ProductRequestDTO> productsRequestList);
+    ProductModel findById(Long productId);
 }
