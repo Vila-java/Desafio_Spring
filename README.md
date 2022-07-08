@@ -58,12 +58,12 @@ O projeto consiste no desenvolvimento de uma API para fazer o cadastro de produt
 
 
 ## Integrantes
-[Weslley Rocha](https://github.com/WeslleyRocha)<br>
-[Evelin C. Rodrigues](https://github.com/everodrigues)<br>
-[Bianca Polegatti](https://github.com/biancapolegatti)<br> 
-[Bianca Klein](https://github.com/bischmitt98)<br>
-[Matheus Roberto](https://github.com/matheusaalves)<br> 
-[Samantha Pires](https://github.com/SamanthaPiresLuchmannLeal)<br>
+<img src="https://img.icons8.com/color/48/000000/git.png" title= "Git"/> [Weslley Rocha](https://github.com/WeslleyRocha)<br>
+<img src="https://img.icons8.com/color/48/000000/git.png" title= "Git"/> [Evelin C. Rodrigues](https://github.com/everodrigues)<br>
+<img src="https://img.icons8.com/color/48/000000/git.png" title= "Git"/> [Bianca Polegatti](https://github.com/biancapolegatti)<br> 
+<img src="https://img.icons8.com/color/48/000000/git.png" title= "Git"/> [Bianca Klein](https://github.com/bischmitt98)<br>
+<img src="https://img.icons8.com/color/48/000000/git.png" title= "Git"/> [Matheus Roberto](https://github.com/matheusaalves)<br> 
+<img src="https://img.icons8.com/color/48/000000/git.png" title= "Git"/> [Samantha Pires](https://github.com/SamanthaPiresLuchmannLeal)<br>
 
 ## Documentação
 
