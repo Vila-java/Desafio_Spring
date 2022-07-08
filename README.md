@@ -2,7 +2,7 @@
 
 ## Sobre
 
-### Aplicação - Funcionalidades
+### Aplicação
 
 1. Cadastrar uma lista de produtos
 
@@ -49,4 +49,18 @@
 ![image](https://user-images.githubusercontent.com/108008639/178040118-1787ec3f-d4af-4cd7-b09d-ca34191cfd33.png)
 
 ## Ambiente de Desenvolvimento
+
+
+## Documentação
+
+Documentação do porjeto está disponível em [Amika Wiki](https://fga-eps-mds.github.io/2019.2-Amika-Wiki/#/).
+
+## Integrantes
+[Weslley Rocha](https://github.com/WeslleyRocha)<br>
+[Evelin C. Rodrigues](https://github.com/everodrigues)<br>
+[Bianca Polegatti](https://github.com/biancapolegatti)<br> 
+[Bianca Klein](https://github.com/bischmitt98)<br>
+[Matheus Roberto](https://github.com/matheusaalves)<br> 
+[Samantha Pires](https://github.com/SamanthaPiresLuchmannLeal)<br>
+
 
