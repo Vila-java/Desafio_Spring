@@ -43,30 +43,18 @@ O projeto consiste no desenvolvimento de uma API para fazer o cadastro de produt
 
 
 ## Tecnologias desenvolvimento de código
+<img src="https://img.icons8.com/color/48/000000/git.png"/> <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"/> <img src="https://img.icons8.com/color/48/000000/spring-logo.png"/> <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png"/>
 
-<div class="row">
-    <img src="https://user-images.githubusercontent.com/108008639/178039834-8ac75bda-5747-471c-b495-f98d420df08b.png" width="150">
-    <img src="https://user-images.githubusercontent.com/108008639/178039617-f174d62d-f77c-4267-85e9-51f7c0b4c716.png" width="150">
-    <img src="https://user-images.githubusercontent.com/108008639/178039704-9c7a0074-13c1-4831-8183-51b59661f6ec.png" width="150">
-    <img src="https://user-images.githubusercontent.com/108008639/178040152-e98258f2-62a7-4578-8534-3e5313e3b069.png" width="150">
-</div>
 
 
 ## Tecnologias comunicação
 
-
-<div class="row">
-    <img src="https://user-images.githubusercontent.com/108008639/178039983-d0dccfe3-2607-4aad-a2e6-cc2e15625316.png" width="150">
-    <img src="https://user-images.githubusercontent.com/108008639/178040006-e63020a9-2e04-48bb-bbf6-009205be1db0.png" width="150">
-    <img src="https://user-images.githubusercontent.com/108008639/178040118-1787ec3f-d4af-4cd7-b09d-ca34191cfd33.png" width="150">
-</div>
+<img src="https://img.icons8.com/color/48/000000/slack-new.png"/> <img src="https://img.icons8.com/color/48/000000/trello.png"/> <img src="https://img.icons8.com/color/48/000000/google-meet.png"/>
 
 
 ## Ambiente de Desenvolvimento
 
-<div class="row">
-	<img src="https://user-images.githubusercontent.com/108008639/178039774-784eb950-35f5-487b-a9d8-6d6d9c79e6f8.png" width="150">
-</div>
+<img src="https://img.icons8.com/color/48/000000/intellij-idea.png"/>
 
 
 ## Integrantes
