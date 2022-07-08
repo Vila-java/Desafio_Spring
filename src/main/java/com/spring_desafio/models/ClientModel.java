@@ -6,10 +6,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
-public class ClientModel {
-
+public class ClientModel <T>{
 	private Long clientId;
-	private String name, phoneNumber, emailAddress;
-
+	private String name, phoneNumber, emailAddress, state;
 }

@@ -10,11 +10,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ClientDTO {
 
-	private String name, phoneNumber, emailAddress;
+	private String name, phoneNumber, emailAddress, state;
 
 	public ClientDTO(ClientModel clientModel) {
 		this.name = clientModel.getName();
 		this.phoneNumber = clientModel.getPhoneNumber();
 		this.emailAddress = clientModel.getEmailAddress();
+		this.state = clientModel.getState();
 	}
 }
