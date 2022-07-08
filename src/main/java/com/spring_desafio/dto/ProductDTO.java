@@ -5,6 +5,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Classe ProductDTO,
+ * @author Bianca Schmitt
+ * @author Bianca Polegatti
+ * @author Evelin Rodrigues
+ * @author Matheus Roberto
+ * @author Samantha Leal
+ * @author Weslley Rocha
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,6 +24,11 @@ public class ProductDTO {
 	private boolean freeShipping;
 	private double price;
 
+	/**
+	 * Instantiates a new Product dto.
+	 *
+	 * @param productModel Construtor que transforma o objeto ProductModel em ProductDTO.
+	 */
 	public ProductDTO(ProductModel productModel) {
 		this.name = productModel.getName();
 		this.category = productModel.getCategory();

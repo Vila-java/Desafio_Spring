@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.spring_desafio"},{"l":"com.spring_desafio.controllers"},{"l":"com.spring_desafio.dto"},{"l":"com.spring_desafio.models"},{"l":"com.spring_desafio.repositories"},{"l":"com.spring_desafio.services"}]

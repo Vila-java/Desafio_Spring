@@ -9,9 +9,19 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Classe ClientController, Endpoint de clientes.
+ * @author Bianca Schmitt
+ * @author Bianca Polegatti
+ * @author Evelin Rodrigues
+ * @author Matheus Roberto
+ * @author Samantha Leal
+ * @author Weslley Rocha
+ */
 @RequestMapping("api/v1/clients")
 @RestController
 public class ClientController {
+
     @Autowired
     private ClientService clientService;
 
@@ -30,3 +40,4 @@ public class ClientController {
         return ResponseEntity.ok(productDTOList);
     }
 }
+

@@ -12,11 +12,25 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Classe ProductRepository, responsável por manipular arquivos.
+ * @author Bianca Schmitt
+ * @author Bianca Polegatti
+ * @author Evelin Rodrigues
+ * @author Matheus Roberto
+ * @author Samantha Leal
+ * @author Weslley Rocha
+ */
 @Repository
 public class ProductRepository {
 
     private final String LINK_FILE = "src/main/resources/data/products.json";
 
+    /**
+     * Gets products.
+     * Responsável por abrir, ler e tratar erro de leitura
+     * @return Lista
+     */
     public List<ProductModel> getProducts() {
         ObjectMapper mapper = new ObjectMapper();
         List<ProductModel> productModelList = null;
@@ -31,7 +45,13 @@ public class ProductRepository {
         return productModelList;
     }
 
-    public void createProducts(List<ProductModel> newProductsList) {
+    /**
+     * Create products.
+     * Responsável por abrir, ler criar uma nova copia, inserir os novos arquivos nessa copia,
+     * * fechar e sobrescrever o arquivo original com as alterações realizadas.
+     * @param newProductsList Cria a nova lista
+     */
+    public void createProducts (List<ProductModel> newProductsList){
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
 

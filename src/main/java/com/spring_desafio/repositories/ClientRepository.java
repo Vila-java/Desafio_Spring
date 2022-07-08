@@ -1,13 +1,10 @@
 package com.spring_desafio.repositories;
 
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.spring_desafio.exception.CannotBeNullException;
 import com.spring_desafio.exception.ClientAlreadyExistsException;
 import com.spring_desafio.exception.InvalidServerException;
-import com.spring_desafio.exception.NotFoundException;
 import com.spring_desafio.models.ClientModel;
 import org.springframework.stereotype.Repository;
 
@@ -16,6 +13,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Classe ClientRepository, responsável por manipular arquivos.
+ * @author Bianca Schmitt
+ * @author Bianca Polegatti
+ * @author Evelin Rodrigues
+ * @author Matheus Roberto
+ * @author Samantha Leal
+ * @author Weslley Rocha
+ */
 @Repository
 public class ClientRepository {
     private final String LINK_FILE = "src/main/resources/data/clients.json";
