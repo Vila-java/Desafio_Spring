@@ -66,6 +66,6 @@ O projeto consiste no desenvolvimento de uma API para fazer o cadastro de produt
 [Samantha Pires](https://github.com/SamanthaPiresLuchmannLeal)<br>
 
 ## Documentação
-[- JavaDoc.](...)
+[- JavaDoc](https://github.com/Vila-java/Desafio_Spring/tree/main/JavaDoc)
 
 
