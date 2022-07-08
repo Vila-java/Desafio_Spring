@@ -10,12 +10,32 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * @Description Classe ProductController, Endpoints de protutos.
+ * @Author Bianca Schmitt
+ * @Author Bianca Polegatti
+ * @Author Evelin Rodrigues
+ * @Author Matheus Roberto
+ * @Author Samantha Leal
+ * @Author Weslley Rocha
+ */
+
 @RequestMapping("api/v1/articles")
 @RestController
 public class ProductController {
 
     @Autowired
     private ProductService productService;
+
+    /**
+     * Gets products,
+     * @Description Pegar uma lista de todos os produtos, filtrando por:
+     * @param category     categoria
+     * @param freeShipping frete grátis
+     * @param prestige    avaliação
+     * @param order       ordem
+     * @return Retorna a lista de produtos com ou sem filtro.
+     */
 
     @GetMapping
     public ResponseEntity<List<ProductDTO>> getProducts(
@@ -32,11 +52,23 @@ public class ProductController {
         return ResponseEntity.ok(list);
     }
 
+    /**
+     * Create products response entity.
+     * @param newProductsList Recebe uma lista de produtos.
+     * @return Retorna uma lista de produtos
+     */
+
     @PostMapping
     public ResponseEntity<List<ProductDTO>> createProducts(@RequestBody List<ProductModel> newProductsList) {
         List<ProductDTO> productDTOList = productService.createProducts(newProductsList);
         return ResponseEntity.ok(productDTOList);
     }
+
+    /**
+     * Total value response entity.
+     * @param productsRequestList Retorna o valor do total dos produtos
+     * @return Retorna o valor do total dos produtos
+     */
 
     @PostMapping("/totalValue")
     public ResponseEntity<Double> totalValue(@RequestBody List<ProductRequestDTO> productsRequestList){

@@ -2,10 +2,8 @@ package com.spring_desafio.repositories;
 
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.spring_desafio.models.ProductModel;
-import org.apache.catalina.mapper.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.io.File;
@@ -13,10 +11,27 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
+/**
+ * @Description Classe ProductRepository, responsável por manipular arquivos.
+ * @Author Bianca Schmitt
+ * @Author Bianca Polegatti
+ * @Author Evelin Rodrigues
+ * @Author Matheus Roberto
+ * @Author Samantha Leal
+ * @Author Weslley Rocha
+ */
+
 @Repository
 public class ProductRepository {
 
     private final String LINK_FILE = "src/main/resources/data/products.json";
+
+    /**
+     * Gets products.
+     * @Description Responsável por abrir, ler e tratar erro de leitura
+     * @return Lista
+     */
 
     public List<ProductModel> getProducts() {
         ObjectMapper mapper = new ObjectMapper();
@@ -31,6 +46,14 @@ public class ProductRepository {
 
         return productModelList;
     }
+
+    /**
+     * Create products.
+     * @Description Responsável por abrir, ler criar uma nova copia, inserir os novos arquivos nessa copia,
+     * * fechar e sobrescrever o arquivo original com as alterações realizadas.
+     * @param newProductsList Cria a nova lista
+     */
+
     public void createProducts (List<ProductModel> newProductsList){
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());

@@ -5,6 +5,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @Description Classe ProductDTO,
+ * @Author Bianca Schmitt
+ * @Author Bianca Polegatti
+ * @Author Evelin Rodrigues
+ * @Author Matheus Roberto
+ * @Author Samantha Leal
+ * @Author Weslley Rocha
+ */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,6 +24,12 @@ public class ProductDTO {
 	private Integer quantity;
 	private boolean freeShipping;
 	private double price;
+
+	/**
+	 * Instantiates a new Product dto.
+	 *
+	 * @param productModel the product model
+	 */
 
 	public ProductDTO(ProductModel productModel) {
 		this.name = productModel.getName();

@@ -6,6 +6,15 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * @Author Bianca Schmitt
+ * @Author Bianca Polegatti
+ * @Author Evelin Rodrigues
+ * @Author Matheus Roberto
+ * @Author Samantha Leal
+ * @Author Weslley Rocha
+ */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
