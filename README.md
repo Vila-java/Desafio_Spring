@@ -1,8 +1,16 @@
 # Desafio Spring I
 
+![image](https://user-images.githubusercontent.com/108008639/178047534-f8aabf31-d08c-422c-a55c-a4dec1232b4e.png)
+
+
 ## Sobre
 
-### Aplicação
+Este é um projeto proposto pela Digital House no Bootcamp IT Java 6 que visa a prática dos conteúdos de Git, Java, Spring e API REST. Além de práticas ágeis do Scrum tais como: Daily e Sprint. E a utilização do método Kaban pelo trello.
+
+O projeto consiste no desenvolvimento de uma API para fazer o cadastro de produtos, operação de compra e visualização dos produtos com determinados filtros e ordenações. Utilizando os métodos POST e GET do HTTP.
+
+
+### Funcionalidades da Aplicação
 
 1. Cadastrar uma lista de produtos
 
@@ -36,10 +44,9 @@
 
 ## Tecnologias desenvolvimento de código
 
+![image](https://user-images.githubusercontent.com/108008639/178039834-8ac75bda-5747-471c-b495-f98d420df08b.png)
 ![image](https://user-images.githubusercontent.com/108008639/178039617-f174d62d-f77c-4267-85e9-51f7c0b4c716.png)
 ![image](https://user-images.githubusercontent.com/108008639/178039704-9c7a0074-13c1-4831-8183-51b59661f6ec.png)
-![image](https://user-images.githubusercontent.com/108008639/178039774-784eb950-35f5-487b-a9d8-6d6d9c79e6f8.png)
-![image](https://user-images.githubusercontent.com/108008639/178039834-8ac75bda-5747-471c-b495-f98d420df08b.png)
 ![image](https://user-images.githubusercontent.com/108008639/178040152-e98258f2-62a7-4578-8534-3e5313e3b069.png)
 
 ## Tecnologias comunicação
@@ -50,10 +57,9 @@
 
 ## Ambiente de Desenvolvimento
 
+![image](https://user-images.githubusercontent.com/108008639/178039774-784eb950-35f5-487b-a9d8-6d6d9c79e6f8.png)
 
-## Documentação
 
-Documentação do porjeto está disponível em [Amika Wiki](https://fga-eps-mds.github.io/2019.2-Amika-Wiki/#/).
 
 ## Integrantes
 [Weslley Rocha](https://github.com/WeslleyRocha)<br>
