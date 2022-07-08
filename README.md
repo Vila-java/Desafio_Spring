@@ -50,8 +50,3 @@
 
 ## Ambiente de Desenvolvimento
 
-
-## Documentação
-
-Documentação do porjeto está disponível em [Amika Wiki](https://fga-eps-mds.github.io/2019.2-Amika-Wiki/#/).
-
