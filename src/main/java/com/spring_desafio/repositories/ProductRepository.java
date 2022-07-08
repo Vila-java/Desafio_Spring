@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import com.spring_desafio.exception.InvalidServerException;
 import com.spring_desafio.models.ProductModel;
 import org.apache.catalina.mapper.Mapper;
 import org.springframework.stereotype.Repository;
@@ -31,6 +32,7 @@ public class ProductRepository {
 
         return productModelList;
     }
+
     public void createProducts (List<ProductModel> newProductsList){
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
@@ -45,5 +47,6 @@ public class ProductRepository {
         } catch (Exception ex) {
 
         }
+        throw new InvalidServerException("Internal  server error");
    }
 }

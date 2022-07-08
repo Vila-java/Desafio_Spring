@@ -121,10 +121,6 @@ public class ProductServiceImpl implements ProductService{
                 .stream()
                 .mapToDouble(p->this.findById(p.getProductId()).getPrice() * p.getQuantity())
                 .sum();
-//                .reduce(0, (p, t)->{
-//                   return t + this.findById(p.getProductId()).getPrice() * p.getQuantity().intValue();
-//                });
-
         return total;
     }
 
