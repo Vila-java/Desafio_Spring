@@ -2,11 +2,9 @@ package com.spring_desafio.repositories;
 
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.spring_desafio.exception.InvalidServerException;
 import com.spring_desafio.models.ProductModel;
-import org.apache.catalina.mapper.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.io.File;

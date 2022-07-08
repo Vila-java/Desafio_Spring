@@ -1,8 +1,6 @@
 package com.spring_desafio.handler;
 
-import com.spring_desafio.exception.ExceptionDetails;
-import com.spring_desafio.exception.InvalidServerException;
-import com.spring_desafio.exception.NotFoundException;
+import com.spring_desafio.exception.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -23,6 +21,32 @@ public class ExceptionGenericsHandler {
                         .timestamp(LocalDateTime.now())
                         .build(),
                 HttpStatus.NOT_FOUND
+        );
+    }
+
+    @ExceptionHandler(ClientAlreadyExistsException.class)
+    public ResponseEntity<ExceptionDetails> handlerClientAlreadyExistsException(Exception ex) {
+        return new ResponseEntity<>(
+                ExceptionDetails.builder()
+                        .title("Client already exists!")
+                        .status(HttpStatus.CONFLICT.value())
+                        .message(ex.getMessage())
+                        .timestamp(LocalDateTime.now())
+                        .build(),
+                HttpStatus.CONFLICT
+        );
+    }
+
+    @ExceptionHandler(CannotBeNullException.class)
+    public ResponseEntity<ExceptionDetails> handlerInternalServerError(CannotBeNullException ex) {
+        return new ResponseEntity<ExceptionDetails>(
+                ExceptionDetails.builder()
+                        .title("Field cannot be null")
+                        .status(HttpStatus.BAD_REQUEST.value())
+                        .message(ex.getMessage())
+                        .timestamp(LocalDateTime.now())
+                        .build(),
+                HttpStatus.BAD_REQUEST
         );
     }
 

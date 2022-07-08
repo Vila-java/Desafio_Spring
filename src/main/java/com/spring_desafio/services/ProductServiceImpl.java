@@ -2,7 +2,6 @@ package com.spring_desafio.services;
 
 import com.spring_desafio.dto.ProductDTO;
 import com.spring_desafio.dto.ProductRequestDTO;
-import com.spring_desafio.exception.InvalidServerException;
 import com.spring_desafio.exception.NotFoundException;
 import com.spring_desafio.models.ProductModel;
 import com.spring_desafio.repositories.ProductRepository;
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -133,9 +131,7 @@ public class ProductServiceImpl implements ProductService {
                     .sum();
         } catch (NotFoundException ex) {
             throw ex;
-        } /*catch (Exception ex) {
-            throw new InvalidServerException("Something went wrong");
-        }*/
+        }
         return total;
     }
 
