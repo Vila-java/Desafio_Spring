@@ -58,7 +58,7 @@ O projeto consiste no desenvolvimento de uma API para fazer o cadastro de produt
 
 
 ## Integrantes
-<img src="https://img.icons8.com/color/48/000000/github.png" title= "Git"/> [Weslley Rocha](https://github.com/WeslleyRocha)<br>
+<img src="https://img.icons8.com/color/48/000000/github.png" title= "github"/> [Weslley Rocha](https://github.com/WeslleyRocha)<br>
 <img src="https://img.icons8.com/color/48/000000/github.png" title= "Git"/> [Evelin C. Rodrigues](https://github.com/everodrigues)<br>
 <img src="https://img.icons8.com/color/48/000000/github.png" title= "Git"/> [Bianca Polegatti](https://github.com/biancapolegatti)<br> 
 <img src="https://img.icons8.com/color/48/000000/github.png" title= "Git"/> [Bianca Klein](https://github.com/bischmitt98)<br>
