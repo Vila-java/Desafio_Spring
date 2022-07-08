@@ -4,15 +4,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Description Classe ClientController, Endpoint de clientes.
- * @Author Bianca Schmitt
- * @Author Bianca Polegatti
- * @Author Evelin Rodrigues
- * @Author Matheus Roberto
- * @Author Samantha Leal
- * @Author Weslley Rocha
+ * @description Classe ClientController, Endpoint de clientes.
+ * @author Bianca Schmitt
+ * @author Bianca Polegatti
+ * @author Evelin Rodrigues
+ * @author Matheus Roberto
+ * @author Samantha Leal
+ * @author Weslley Rocha
  */
-
 @RequestMapping("api/v1/clients")
 @RestController
 public class ClientController {

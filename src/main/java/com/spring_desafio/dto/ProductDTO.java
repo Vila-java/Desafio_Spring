@@ -6,15 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @Description Classe ProductDTO,
- * @Author Bianca Schmitt
- * @Author Bianca Polegatti
- * @Author Evelin Rodrigues
- * @Author Matheus Roberto
- * @Author Samantha Leal
- * @Author Weslley Rocha
+ * @description Classe ProductDTO,
+ * @author Bianca Schmitt
+ * @author Bianca Polegatti
+ * @author Evelin Rodrigues
+ * @author Matheus Roberto
+ * @author Samantha Leal
+ * @author Weslley Rocha
  */
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,7 +29,6 @@ public class ProductDTO {
 	 *
 	 * @param productModel the product model
 	 */
-
 	public ProductDTO(ProductModel productModel) {
 		this.name = productModel.getName();
 		this.category = productModel.getCategory();

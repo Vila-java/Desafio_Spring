@@ -11,15 +11,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * @Description Classe ProductController, Endpoints de protutos.
- * @Author Bianca Schmitt
- * @Author Bianca Polegatti
- * @Author Evelin Rodrigues
- * @Author Matheus Roberto
- * @Author Samantha Leal
- * @Author Weslley Rocha
+ * @description Classe ProductController, Endpoints de produtos.
+ * @author Bianca Schmitt
+ * @author Bianca Polegatti
+ * @author Evelin Rodrigues
+ * @author Matheus Roberto
+ * @author Samantha Leal
+ * @author Weslley Rocha
  */
-
 @RequestMapping("api/v1/articles")
 @RestController
 public class ProductController {
@@ -29,14 +28,14 @@ public class ProductController {
 
     /**
      * Gets products,
-     * @Description Pegar uma lista de todos os produtos, filtrando por:
+     *
+     * Pegar uma lista de todos os produtos, filtrando por:
      * @param category     categoria
      * @param freeShipping frete grátis
      * @param prestige    avaliação
      * @param order       ordem
      * @return Retorna a lista de produtos com ou sem filtro.
      */
-
     @GetMapping
     public ResponseEntity<List<ProductDTO>> getProducts(
             @RequestParam(required = false) String category,
@@ -57,7 +56,6 @@ public class ProductController {
      * @param newProductsList Recebe uma lista de produtos.
      * @return Retorna uma lista de produtos
      */
-
     @PostMapping
     public ResponseEntity<List<ProductDTO>> createProducts(@RequestBody List<ProductModel> newProductsList) {
         List<ProductDTO> productDTOList = productService.createProducts(newProductsList);
@@ -69,7 +67,6 @@ public class ProductController {
      * @param productsRequestList Retorna o valor do total dos produtos
      * @return Retorna o valor do total dos produtos
      */
-
     @PostMapping("/totalValue")
     public ResponseEntity<Double> totalValue(@RequestBody List<ProductRequestDTO> productsRequestList){
         double total = productService.totalValue(productsRequestList);

@@ -8,15 +8,14 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * @Description Classe OrderDTO,
- * @Author Bianca Schmitt
- * @Author Bianca Polegatti
- * @Author Evelin Rodrigues
- * @Author Matheus Roberto
- * @Author Samantha Leal
- * @Author Weslley Rocha
+ * @description Classe OrderDTO,
+ * @author Bianca Schmitt
+ * @author Bianca Polegatti
+ * @author Evelin Rodrigues
+ * @author Matheus Roberto
+ * @author Samantha Leal
+ * @author Weslley Rocha
  */
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

@@ -6,15 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @Description Classe ClientDTO, Endpoint de requisição de compras.
- * @Author Bianca Schmitt
- * @Author Bianca Polegatti
- * @Author Evelin Rodrigues
- * @Author Matheus Roberto
- * @Author Samantha Leal
- * @Author Weslley Rocha
+ * @description Classe ClientDTO, Endpoint de requisição de compras.
+ * @author Bianca Schmitt
+ * @author Bianca Polegatti
+ * @author Evelin Rodrigues
+ * @author Matheus Roberto
+ * @author Samantha Leal
+ * @author Weslley Rocha
  */
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,7 +24,7 @@ public class ClientDTO {
 	/**
 	 * Instantiates a new Client dto.
 	 *
-	 * @param clientModel the client model
+	 * @param clientModel Construtor que transforma o objeto ClientModel em ClientDTO.
 	 */
 	public ClientDTO(ClientModel clientModel) {
 		this.name = clientModel.getName();

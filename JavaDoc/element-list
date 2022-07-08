@@ -1,0 +1,6 @@
+com.spring_desafio
+com.spring_desafio.controllers
+com.spring_desafio.dto
+com.spring_desafio.models
+com.spring_desafio.repositories
+com.spring_desafio.services

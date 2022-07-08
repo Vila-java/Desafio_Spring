@@ -11,17 +11,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
 /**
- * @Description Classe ProductRepository, responsável por manipular arquivos.
- * @Author Bianca Schmitt
- * @Author Bianca Polegatti
- * @Author Evelin Rodrigues
- * @Author Matheus Roberto
- * @Author Samantha Leal
- * @Author Weslley Rocha
+ * @description Classe ProductRepository, responsável por manipular arquivos.
+ * @author Bianca Schmitt
+ * @author Bianca Polegatti
+ * @author Evelin Rodrigues
+ * @author Matheus Roberto
+ * @author Samantha Leal
+ * @author Weslley Rocha
  */
-
 @Repository
 public class ProductRepository {
 
@@ -29,10 +27,9 @@ public class ProductRepository {
 
     /**
      * Gets products.
-     * @Description Responsável por abrir, ler e tratar erro de leitura
+     * @description Responsável por abrir, ler e tratar erro de leitura
      * @return Lista
      */
-
     public List<ProductModel> getProducts() {
         ObjectMapper mapper = new ObjectMapper();
         List<ProductModel> productModelList = null;
@@ -49,11 +46,10 @@ public class ProductRepository {
 
     /**
      * Create products.
-     * @Description Responsável por abrir, ler criar uma nova copia, inserir os novos arquivos nessa copia,
+     * @description Responsável por abrir, ler criar uma nova copia, inserir os novos arquivos nessa copia,
      * * fechar e sobrescrever o arquivo original com as alterações realizadas.
      * @param newProductsList Cria a nova lista
      */
-
     public void createProducts (List<ProductModel> newProductsList){
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
