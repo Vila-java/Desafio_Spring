@@ -27,13 +27,13 @@ public class ProductRepository {
             productModelList = Arrays.asList
                     (mapper.readValue(new File(LINK_FILE), ProductModel[].class));
         } catch (Exception ex) {
-            System.out.println("Error in the file " + LINK_FILE);
+            throw new InvalidServerException("Internal  server error");
         }
 
         return productModelList;
     }
 
-    public void createProducts (List<ProductModel> newProductsList){
+    public void createProducts(List<ProductModel> newProductsList) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
 
@@ -45,8 +45,7 @@ public class ProductRepository {
             copyList.addAll(newProductsList);
             writer.writeValue(new File(LINK_FILE), copyList);
         } catch (Exception ex) {
-
+            throw new InvalidServerException("Internal  server error");
         }
-        throw new InvalidServerException("Internal  server error");
-   }
+    }
 }

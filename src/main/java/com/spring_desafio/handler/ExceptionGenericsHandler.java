@@ -14,20 +14,20 @@ import java.time.LocalDateTime;
 public class ExceptionGenericsHandler {
 
     @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<ExceptionDetails> handlerNotFoundException(Exception ex){
+    public ResponseEntity<ExceptionDetails> handlerNotFoundException(Exception ex) {
         return new ResponseEntity<>(
                 ExceptionDetails.builder()
-                .title("Not found")
-                .status(HttpStatus.NOT_FOUND.value())
-                .message(ex.getMessage())
-                .timestamp(LocalDateTime.now())
-                .build(),
+                        .title("Not found")
+                        .status(HttpStatus.NOT_FOUND.value())
+                        .message(ex.getMessage())
+                        .timestamp(LocalDateTime.now())
+                        .build(),
                 HttpStatus.NOT_FOUND
         );
     }
 
     @ExceptionHandler(InvalidServerException.class)
-    public ResponseEntity<ExceptionDetails> handlerInternalServerError(InvalidServerException ex){
+    public ResponseEntity<ExceptionDetails> handlerInternalServerError(InvalidServerException ex) {
         return new ResponseEntity<ExceptionDetails>(
                 ExceptionDetails.builder()
                         .title("Internal server error")
