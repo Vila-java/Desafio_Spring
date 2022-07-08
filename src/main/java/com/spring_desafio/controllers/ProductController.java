@@ -39,7 +39,7 @@ public class ProductController {
     }
 
     @PostMapping("/totalValue")
-    public ResponseEntity<Double> totalValue(@RequestBody List<ProductRequestDTO> productsRequestList){
+    public ResponseEntity<Double> totalValue(@RequestBody List<ProductRequestDTO> productsRequestList) {
         double total = productService.totalValue(productsRequestList);
         return ResponseEntity.ok(total);
     }

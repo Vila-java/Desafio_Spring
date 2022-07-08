@@ -142,4 +142,13 @@
   "quantity" : 7,
   "freeShipping" : true,
   "price" : 500.0
+}, {
+  "productId" : null,
+  "name" : null,
+  "category" : "Ferramentas",
+  "prestige" : "*",
+  "brand" : "FORTG",
+  "quantity" : 5,
+  "freeShipping" : true,
+  "price" : 1800.0
 } ]
