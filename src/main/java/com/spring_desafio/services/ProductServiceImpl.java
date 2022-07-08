@@ -2,6 +2,7 @@ package com.spring_desafio.services;
 
 import com.spring_desafio.dto.ProductDTO;
 import com.spring_desafio.dto.ProductRequestDTO;
+import com.spring_desafio.exception.InvalidServerException;
 import com.spring_desafio.models.ProductModel;
 import com.spring_desafio.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -117,10 +118,15 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public double totalValue(List<ProductRequestDTO> productsRequestList) {
-        double total = productsRequestList
+        double total = 0;
+        try {
+        total = productsRequestList
                 .stream()
                 .mapToDouble(p->this.findById(p.getProductId()).getPrice() * p.getQuantity())
                 .sum();
+        }catch (Exception ex){
+            throw new InvalidServerException("Something went wrong");
+        }
         return total;
     }
 
