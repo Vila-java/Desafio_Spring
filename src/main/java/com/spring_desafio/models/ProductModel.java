@@ -9,11 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ProductModel {
 
-	private long productId;
+	private Long productId;
 	private String name, category, prestige, brand;
 	private Integer quantity;
 	private boolean freeShipping;
 	private double price;
-
 
 }

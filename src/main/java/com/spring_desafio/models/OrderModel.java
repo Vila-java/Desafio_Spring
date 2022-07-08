@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 public class OrderModel {
 
-	private long orderId;
+	private Long orderId;
 	private String name, state, postalCode, country;
 	private List<Long> listId;
 

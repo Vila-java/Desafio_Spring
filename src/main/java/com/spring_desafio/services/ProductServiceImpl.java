@@ -1,6 +1,7 @@
 package com.spring_desafio.services;
 
 import com.spring_desafio.dto.ProductDTO;
+import com.spring_desafio.dto.ProductRequestDTO;
 import com.spring_desafio.models.ProductModel;
 import com.spring_desafio.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 public class ProductServiceImpl implements ProductService{
@@ -105,10 +107,32 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    public ProductModel findById(Long productId) {
+        List<ProductModel> productsList = productRepository.getProducts();
+        return productsList.stream()
+                .filter(p -> p.getProductId().equals(productId))
+                .findAny().orElse(null);
+    }
+
+    @Override
+    public double totalValue(List<ProductRequestDTO> productsRequestList) {
+        double total = productsRequestList
+                .stream()
+                .mapToDouble(p->this.findById(p.getProductId()).getPrice() * p.getQuantity())
+                .sum();
+//                .reduce(0, (p, t)->{
+//                   return t + this.findById(p.getProductId()).getPrice() * p.getQuantity().intValue();
+//                });
+
+        return total;
+    }
+
+    @Override
     public List<ProductDTO> createProducts (List<ProductModel> productsList){
         productRepository.createProducts(productsList);
         return productsList.stream()
                 .map(ProductDTO::new)
                 .collect(Collectors.toList());
     }
+
 }

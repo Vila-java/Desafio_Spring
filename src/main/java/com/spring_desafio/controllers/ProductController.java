@@ -1,6 +1,7 @@
 package com.spring_desafio.controllers;
 
 import com.spring_desafio.dto.ProductDTO;
+import com.spring_desafio.dto.ProductRequestDTO;
 import com.spring_desafio.models.ProductModel;
 import com.spring_desafio.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,5 +38,10 @@ public class ProductController {
         return ResponseEntity.ok(productDTOList);
     }
 
+    @PostMapping("/totalValue")
+    public ResponseEntity<Double> totalValue(@RequestBody List<ProductRequestDTO> productsRequestList){
+        double total = productService.totalValue(productsRequestList);
+        return ResponseEntity.ok(total);
+    }
 }
 
