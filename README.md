@@ -43,18 +43,18 @@ O projeto consiste no desenvolvimento de uma API para fazer o cadastro de produt
 
 
 ## Tecnologias desenvolvimento de código
-<img src="https://img.icons8.com/color/48/000000/git.png"/> <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"/> <img src="https://img.icons8.com/color/48/000000/spring-logo.png"/> <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png"/>
+<img src="https://img.icons8.com/color/48/000000/git.png" title= "Git"/> <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png" title= "Java"/> <img src="https://img.icons8.com/color/48/000000/spring-logo.png" title= "Spring"/> <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" title= "Postman"/>
 
 
 
 ## Tecnologias comunicação
 
-<img src="https://img.icons8.com/color/48/000000/slack-new.png"/> <img src="https://img.icons8.com/color/48/000000/trello.png"/> <img src="https://img.icons8.com/color/48/000000/google-meet.png"/>
+<img src="https://img.icons8.com/color/48/000000/slack-new.png" title= "Slack"/> <img src="https://img.icons8.com/color/48/000000/trello.png" title= "Trello"/> <img src="https://img.icons8.com/color/48/000000/google-meet.png" title= "Google Meet"/>
 
 
 ## Ambiente de Desenvolvimento
 
-<img src="https://img.icons8.com/color/48/000000/intellij-idea.png"/>
+<img src="https://img.icons8.com/color/48/000000/intellij-idea.png" title="IntelliJ"/>
 
 
 ## Integrantes
