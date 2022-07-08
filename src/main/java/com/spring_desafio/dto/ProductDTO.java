@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @description Classe ProductDTO,
+ * Classe ProductDTO,
  * @author Bianca Schmitt
  * @author Bianca Polegatti
  * @author Evelin Rodrigues
@@ -27,7 +27,7 @@ public class ProductDTO {
 	/**
 	 * Instantiates a new Product dto.
 	 *
-	 * @param productModel the product model
+	 * @param productModel Construtor que transforma o objeto ProductModel em ProductDTO.
 	 */
 	public ProductDTO(ProductModel productModel) {
 		this.name = productModel.getName();

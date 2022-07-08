@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * @description Classe OrderDTO,
+ * Classe OrderDTO,
  * @author Bianca Schmitt
  * @author Bianca Polegatti
  * @author Evelin Rodrigues
@@ -27,7 +27,7 @@ public class OrderDTO {
 	/**
 	 * Instantiates a new Order dto.
 	 *
-	 * @param orderModel the order model
+	 * @param orderModel Construtor que transforma o objeto OrderModel em OrderDTO.
 	 */
 	public OrderDTO(OrderModel orderModel) {
 		this.name = orderModel.getName();

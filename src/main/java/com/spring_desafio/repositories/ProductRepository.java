@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @description Classe ProductRepository, responsável por manipular arquivos.
+ * Classe ProductRepository, responsável por manipular arquivos.
  * @author Bianca Schmitt
  * @author Bianca Polegatti
  * @author Evelin Rodrigues
@@ -27,7 +27,7 @@ public class ProductRepository {
 
     /**
      * Gets products.
-     * @description Responsável por abrir, ler e tratar erro de leitura
+     * Responsável por abrir, ler e tratar erro de leitura
      * @return Lista
      */
     public List<ProductModel> getProducts() {
@@ -46,7 +46,7 @@ public class ProductRepository {
 
     /**
      * Create products.
-     * @description Responsável por abrir, ler criar uma nova copia, inserir os novos arquivos nessa copia,
+     * Responsável por abrir, ler criar uma nova copia, inserir os novos arquivos nessa copia,
      * * fechar e sobrescrever o arquivo original com as alterações realizadas.
      * @param newProductsList Cria a nova lista
      */

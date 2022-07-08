@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @description Classe ClientDTO, Endpoint de requisição de compras.
+ * Classe ClientDTO, Endpoint de requisição de compras.
  * @author Bianca Schmitt
  * @author Bianca Polegatti
  * @author Evelin Rodrigues

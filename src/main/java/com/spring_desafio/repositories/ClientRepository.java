@@ -3,6 +3,7 @@ package com.spring_desafio.repositories;
 import org.springframework.stereotype.Repository;
 
 /**
+ * Classe ClientRepository, responsável por manipular arquivos.
  * @author Bianca Schmitt
  * @author Bianca Polegatti
  * @author Evelin Rodrigues

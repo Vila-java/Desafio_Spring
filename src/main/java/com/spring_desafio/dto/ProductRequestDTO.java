@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @description Classe que manipula o pedido de compra.
+ * Classe que manipula o pedido de compra.
  * @author Bianca Schmitt
  * @author Bianca Polegatti
  * @author Evelin Rodrigues

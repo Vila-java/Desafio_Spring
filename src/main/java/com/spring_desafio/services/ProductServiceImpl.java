@@ -10,14 +10,28 @@ import org.springframework.stereotype.Service;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+/**
+ * The type Product service.
+ * Classe de implementaçao da interface productService
+ *
+ * @author Bianca Schmitt
+ * @author Bianca Polegatti
+ * @author Evelin Rodrigues
+ * @author Matheus Roberto
+ * @author Samantha Leal
+ * @author Weslley Rocha
+ */
 @Service
 public class ProductServiceImpl implements ProductService{
 
     @Autowired
     private ProductRepository productRepository;
 
+    /**
+     *
+     * @return Lista de todos os produtos
+     */
     @Override
     public List<ProductDTO> getProducts() {
         List<ProductDTO> productList = productRepository
@@ -28,6 +42,10 @@ public class ProductServiceImpl implements ProductService{
         return productList;
     }
 
+    /**
+     *
+     * @return Lista de todos os produtos filtrados por categoria
+     */
     @Override
     public List<ProductDTO> getProductsByCategory(List<ProductDTO> productDTOList, String category) {
         if(category != null) {
@@ -39,6 +57,10 @@ public class ProductServiceImpl implements ProductService{
         }
     }
 
+    /**
+     *
+     * @return Lista de todos os produtos filtrados por frete gratis
+     */
     @Override
     public List<ProductDTO> getProductsByFreeShipping(List<ProductDTO> productDTOList, Boolean freeShipping) {
         if(freeShipping != null) {
@@ -50,6 +72,10 @@ public class ProductServiceImpl implements ProductService{
         }
     }
 
+    /**
+     *
+     * @return Lista de todos os produtos filtrados por avaliaçao
+     */
     @Override
     public List<ProductDTO> getProductsByPrestige(List<ProductDTO> productDTOList, String prestige) {
         if(prestige != null) {
@@ -61,6 +87,11 @@ public class ProductServiceImpl implements ProductService{
         }
     }
 
+    /**
+     *
+     * @return Lista de todos os produtos filtrados por ordem alfabética e valor de produto,
+     * crescente e decrescente
+     */
     @Override
     public List<ProductDTO> chooseOrder(List<ProductDTO> productList, Integer order) {
         if(order != null) {
@@ -78,6 +109,10 @@ public class ProductServiceImpl implements ProductService{
         return productList;
     }
 
+    /**
+     *
+     * @return Lista de todos os produtos filtrados por ordem alfabetica crescente
+     */
     @Override
     public List<ProductDTO> orderAscByName(List<ProductDTO> productList) {
         return productList.stream()
@@ -85,6 +120,10 @@ public class ProductServiceImpl implements ProductService{
                 .collect(Collectors.toList());
     }
 
+    /**
+     *
+     * @return Lista de todos os produtos filtrados por ordem alfabetica decrescente
+     */
     @Override
     public List<ProductDTO> orderDescByName(List<ProductDTO> productList) {
         return productList.stream()
@@ -92,6 +131,10 @@ public class ProductServiceImpl implements ProductService{
                 .collect(Collectors.toList());
     }
 
+    /**
+     *
+     * @return Lista de todos os produtos filtrados por valor crescente
+     */
     @Override
     public List<ProductDTO> orderAscByValue(List<ProductDTO> productList) {
         return productList.stream()
@@ -99,6 +142,10 @@ public class ProductServiceImpl implements ProductService{
                 .collect(Collectors.toList());
     }
 
+    /**
+     *
+     * @return Lista de todos os produtos filtrados por valor decrescente
+     */
     @Override
     public List<ProductDTO> orderDescByValue(List<ProductDTO> productList) {
         return productList.stream()
@@ -107,6 +154,10 @@ public class ProductServiceImpl implements ProductService{
                 .collect(Collectors.toList());
     }
 
+    /**
+     *
+     * @return Lista de todos os produtos filtrados por id do produto
+     */
     @Override
     public ProductModel findById(Long productId) {
         List<ProductModel> productsList = productRepository.getProducts();
@@ -115,6 +166,10 @@ public class ProductServiceImpl implements ProductService{
                 .findAny().orElse(null);
     }
 
+    /**
+     *
+     * @return Lista o valor total do pedido de compras
+     */
     @Override
     public double totalValue(List<ProductRequestDTO> productsRequestList) {
         double total = productsRequestList
@@ -128,6 +183,10 @@ public class ProductServiceImpl implements ProductService{
         return total;
     }
 
+    /**
+     *
+     * @return Nova lista de produtos
+     */
     @Override
     public List<ProductDTO> createProducts (List<ProductModel> productsList){
         productRepository.createProducts(productsList);

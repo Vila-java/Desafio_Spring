@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * @description Classe ProductController, Endpoints de produtos.
+ * Classe ProductController, Endpoints de produtos.
  * @author Bianca Schmitt
  * @author Bianca Polegatti
  * @author Evelin Rodrigues
@@ -33,7 +33,7 @@ public class ProductController {
      * @param category     categoria
      * @param freeShipping frete grátis
      * @param prestige    avaliação
-     * @param order       ordem
+     * @param order       ordem: 0, 1, 2 e 3
      * @return Retorna a lista de produtos com ou sem filtro.
      */
     @GetMapping

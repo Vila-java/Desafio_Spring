@@ -5,8 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *
- *
  * @author Bianca Schmitt
  * @author Bianca Polegatti
  * @author Evelin Rodrigues
