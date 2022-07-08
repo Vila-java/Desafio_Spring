@@ -2,7 +2,7 @@
 
 ## Sobre
 
-### Aplicação
+### Aplicação - Funcionalidades
 
 1. Cadastrar uma lista de produtos
 
