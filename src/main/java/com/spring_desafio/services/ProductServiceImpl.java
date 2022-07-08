@@ -63,18 +63,19 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public List<ProductDTO> chooseOrder(List<ProductDTO> productList, Integer order) {
-        switch (order) {
-            case 0:
-                return this.orderAscByName(productList);
-            case 1:
-                return this.orderDescByName(productList);
-            case 2:
-                return this.orderAscByValue(productList);
-            case 3:
-                return this.orderDescByValue(productList);
-            default:
-                return productList;
+        if(order != null) {
+            switch (order) {
+                case 0:
+                    return this.orderAscByName(productList);
+                case 1:
+                    return this.orderDescByName(productList);
+                case 2:
+                    return this.orderAscByValue(productList);
+                case 3:
+                    return this.orderDescByValue(productList);
+            }
         }
+        return productList;
     }
 
     @Override
