@@ -35,7 +35,7 @@ public class ProductDTO {
 		this.prestige = productModel.getPrestige();
 		this.brand = productModel.getBrand();
 		this.quantity = productModel.getQuantity();
-		this.freeShipping = productModel.isFreeShipping();
+		this.freeShipping = productModel.getFreeShipping();
 		this.price = productModel.getPrice();
 	}
 }
