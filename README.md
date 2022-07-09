@@ -71,4 +71,4 @@ O projeto consiste no desenvolvimento de uma API para fazer o cadastro de produt
 
 ## Postman 
 [Postman - Link Workspaces](https://go.postman.co/workspace/My-Workspace~ed088188-1514-43a4-884b-e533534cc782/collection/21749168-6961eda0-2cf2-46c2-bb74-c8a834e0165a?action=share&creator=14505463)<br>
-[Postman - Downloads Endpoint](https://github.com/Vila-java/Desafio_Spring/blob/main/src/main/resources/Desafio_Spring.postman_collection.json)
+[Postman - Downloads Endpoint](https://github.com/Vila-java/Desafio_Spring/tree/main/src/main/resources/data)
