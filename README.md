@@ -81,6 +81,6 @@ A aplicação consiste no desenvolvimento de uma API para fazer o cadastro de pr
 [JavaDoc](https://github.com/Vila-java/Desafio_Spring/tree/main/JavaDoc)
 
 ## Postman 
-[Postman - Documentação](https://github.com/Vila-java/Desafio_Spring/blob/feature/Atualizando_Endpoints_Arquivo_Json/src/main/resources/data/README.md)<br>
+[Postman - Documentação](https://github.com/Vila-java/Desafio_Spring/blob/feature/Atualizando_Endpoints_Arquivo_Json/src/main/resources/data/Postman%20Arquivos%20Readme/README.md)<br>
 [Postman - Link Workspaces](https://go.postman.co/workspace/My-Workspace~ed088188-1514-43a4-884b-e533534cc782/collection/21749168-6961eda0-2cf2-46c2-bb74-c8a834e0165a?action=share&creator=14505463)<br>
 [Postman - Downloads Endpoint](https://github.com/Vila-java/Desafio_Spring/tree/main/src/main/resources/data)<br>
