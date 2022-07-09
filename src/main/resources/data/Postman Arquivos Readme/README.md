@@ -1,12 +1,13 @@
 # **Endpoint's** 
 
-- Listar todos os produtos.<br>
+- **Listar todos os produtos.**<br>
 `curl --location --request GET 'http://localhost:8080/api/v1/articles'`
 
 Retorno:<br>
 ![img.png](img.png)
 <br><br>
-- Filtrar produto por cateogria. <br>
+
+- **Filtrar produto por cateogria.** <br>
 Ex: Esportes, Ferramentas, Celulares. <br>
 `curl --location --request GET 'http://localhost:8080/api/v1/articles?category=Esportes'`
 
@@ -14,16 +15,16 @@ Retorno:<br>
 ![img_1.png](img_1.png)
 <br><br>
 
-- Filtrar por Frete Grátis. <br>
+- **Filtrar por Frete Grátis.** <br>
 Ex: True ou False. <br>
 `curl --location --request GET 'http://localhost:8080/api/v1/articles?freeShipping=true'`
 <br><br>
 
-- Filtrar por Frete Grátis e Categoria. <br>
+- **Filtrar por Frete Grátis e Categoria.** <br>
 `curl --location --request GET 'http://localhost:8080/api/v1/articles?freeShipping=true&category=Ferramentas'`
 <br><br>
 
-- Ordenação: <br>
+- **Ordenação:**<br>
 `curl --location --request GET 'http://localhost:8080/api/v1/articles?order=0' \
   --data-raw ''`
 
@@ -36,7 +37,7 @@ Retorno:<br>
 ![img_2.png](img_2.png)
 <br><br>
 
-- Cadastrar novos clientes. <br>
+- **Cadastrar novos clientes.** <br>
 `curl --location --request POST 'http://localhost:8080/api/v1/clients' \
   --header 'Content-Type: application/json' \
   --data-raw '[
@@ -66,7 +67,7 @@ Retorno:<br>
 ![img_3.png](img_3.png)
 <br><br>
 
-- Listar os clientes filtrando por estado.<br>
+- **Listar os clientes filtrando por estado.**<br>
 `curl --location --request GET 'http://localhost:8080/api/v1/clients?state=São Paulo' \
   --data-raw ''`
 
@@ -74,7 +75,7 @@ Retorno:<br>
 ![img_4.png](img_4.png)
 <br><br>
 
-- Listar todos os clientes.<br>
+- **Listar todos os clientes.**<br>
 `curl --location --request GET 'http://localhost:8080/api/v1/clients' \
   --data-raw ''`
 
@@ -82,7 +83,7 @@ Retorno:<br>
 ![img_5.png](img_5.png)
 <br><br>
 
-- Cadastrar Lista de Produtos.<br>
+- **Cadastrar Lista de Produtos.**<br>
 `curl --location --request POST 'http://localhost:8080/api/v1/articles' \
   --header 'Content-Type: application/json' \
   --data-raw '[
@@ -138,7 +139,7 @@ Retorno:<br>
 ![img_6.png](img_6.png)
 <br><br>
 
-- Calcular Valor Total. <br>
+- **Calcular Valor Total.**<br>
 `curl --location --request POST 'http://localhost:8080/api/v1/articles/totalValue' \
   --header 'Content-Type: application/json' \
   --data-raw '[
