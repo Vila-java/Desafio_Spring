@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "6961eda0-2cf2-46c2-bb74-c8a834e0165a",
+		"name": "Desafio_Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14505463"
+	},
+	"item": [
+		{
+			"name": "Filtros",
+			"item": [
+				{
+					"name": "Listar todos os produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar produto por cateogria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/articles?category=Esportes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Esportes"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por Frete Gratis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/articles?freeShipping=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "freeShipping",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por Frete Gratis e Categoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/articles?freeShipping=false&category=Esportes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "freeShipping",
+									"value": "false"
+								},
+								{
+									"key": "category",
+									"value": "Esportes"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ordenação",
+			"item": [
+				{
+					"name": "Ordernar por nome(Crescente)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/articles?order=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ordernar por nome(Decrescente)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/articles?order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ordernar valor(Crescente)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/articles?order=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ordenar valor(Decrescente)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/articles?order=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exceptions",
+			"item": [
+				{
+					"name": "Cadastrar Lista de Produtos Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calcular Valor Total Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n {\n   \"productId\": 0,\n   \"quantity\": 1\n  }\n]\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/articles/totalValue",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articles",
+								"totalValue"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Criar cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n\t\t\"clientId\": \"3\",\n\t\t\"name\": \"Raimundo\",\n\t\t\"phoneNumber\": \"619857746588\",\n\t\t\"emailAddress\": \"matheus@gmail.com\",\n\t\t\"state\": \"Brasília\"\n\t}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar os clientes filtrando por estado",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n\t\t\"clientId\": \"2\",\n\t\t\"name\": \"Joaninha\",\n\t\t\"phoneNumber\": \"619857746588\",\n\t\t\"emailAddress\": \"matheus@gmail.com\",\n\t\t\"state\": \"São Paulo\"\n\t}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/clients?state=São Paulo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "São Paulo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos os clientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n\t\t\"clientId\": \"2\",\n\t\t\"name\": \"Joaninha\",\n\t\t\"phoneNumber\": \"619857746588\",\n\t\t\"emailAddress\": \"matheus@gmail.com\",\n\t\t\"state\": \"São Paulo\"\n\t}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cadastrar Lista de Produtos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calcular Valor Total",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n {\n   \"productId\": 1,\n   \"quantity\": 1\n  },\n  {\n   \"productId\": 2,\n   \"quantity\": 1\n   }\n]\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/articles/totalValue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"articles",
+						"totalValue"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
