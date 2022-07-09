@@ -43,7 +43,7 @@ A aplicação consiste no desenvolvimento de uma API para fazer o cadastro de pr
 
 ### Funcionalidades do Cliente
 
-1. Cadastrar uma lista de clientes, não permitindo o cadastro de um cliente já existente
+1. Cadastrar uma lista de clientes, não permitindo o cadastro de um cliente já existente e com informações incompletas
 
 2. Retornar uma lista completa de todos os clientes
 
