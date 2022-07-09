@@ -5,9 +5,9 @@
 
 ## Sobre
 
-Este é um projeto proposto pela Digital House no Bootcamp IT Java 6 que visa a prática dos conteúdos de Git, Java, Spring e API REST. Além de práticas ágeis do Scrum tais como: Daily e Sprint. E a utilização do método Kaban pelo trello.
+Este é um projeto proposto pela Digital House no Bootcamp IT Java 6 que visa a prática dos conteúdos de Git, Java, Spring e API REST. Além de práticas ágeis do Scrum tais como: Daily e Sprint, bem como a utilização do método Kaban pelo Trello.
 
-O projeto consiste no desenvolvimento de uma API para fazer o cadastro de produtos, operação de compra e visualização dos produtos com determinados filtros e ordenações. Utilizando os métodos POST e GET do HTTP.
+A aplicação consiste no desenvolvimento de uma API para fazer o cadastro de produtos, operação de compra e visualização dos produtos com determinados filtros e ordenações utilizando os métodos POST e GET do HTTP.
 
 
 ### Funcionalidades da Aplicação Produto
