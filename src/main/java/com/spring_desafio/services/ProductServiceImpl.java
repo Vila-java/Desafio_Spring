@@ -2,6 +2,7 @@ package com.spring_desafio.services;
 
 import com.spring_desafio.dto.ProductDTO;
 import com.spring_desafio.dto.ProductRequestDTO;
+import com.spring_desafio.exception.InvalidServerException;
 import com.spring_desafio.exception.NotFoundException;
 import com.spring_desafio.models.ProductModel;
 import com.spring_desafio.repositories.ProductRepository;
@@ -161,16 +162,11 @@ public class ProductServiceImpl implements ProductService {
      */
     @Override
     public ProductModel findById(Long productId) {
-        try {
-            List<ProductModel> productsList = productRepository.getProducts();
-            ProductModel product = productsList.stream()
-                    .filter(p -> p.getProductId().equals(productId))
-                    .findAny().orElse(null);
-            return product;
-
-        } catch (NullPointerException e) {
-            throw new NotFoundException("Not found");
-        }
+        List<ProductModel> productsList = productRepository.getProducts();
+        ProductModel product = productsList.stream()
+                .filter(p -> p.getProductId().equals(productId))
+                .findAny().orElse(null);
+        return product;
     }
 
     /**
@@ -183,10 +179,19 @@ public class ProductServiceImpl implements ProductService {
         try {
             total = productsRequestList
                     .stream()
-                    .mapToDouble(p -> this.findById(p.getProductId()).getPrice() * p.getQuantity())
+                    .mapToDouble(p -> {
+                        ProductModel product = this.findById(p.getProductId());
+                        if (product==null) {
+                            throw new NotFoundException("Not found productId");
+                        } else {
+                            return product.getPrice() * product.getQuantity();
+                        }
+                    })
                     .sum();
         } catch (NotFoundException ex) {
             throw ex;
+        } catch (Exception ex) {
+            throw new InvalidServerException("Internal  server error");
         }
         return total;
     }
