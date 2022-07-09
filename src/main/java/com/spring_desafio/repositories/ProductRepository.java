@@ -52,9 +52,10 @@ public class ProductRepository {
      * @param newProductsList Cria a nova lista
      */
     public void createProducts (List<ProductModel> newProductsList){
+        newProductsList.forEach(p -> p.validateAllFields());
+
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
-
         List<ProductModel> productList = null;
 
         try {

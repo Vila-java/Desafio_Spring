@@ -3,6 +3,7 @@ package com.spring_desafio.repositories;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import com.spring_desafio.exception.CannotBeNullException;
 import com.spring_desafio.exception.ClientAlreadyExistsException;
 import com.spring_desafio.exception.InvalidServerException;
 import com.spring_desafio.models.ClientModel;
@@ -40,6 +41,31 @@ public class ClientRepository {
         return clientModelList;
     }
 
+    public void createClients (List<ClientModel> newClientsList){
+        newClientsList.forEach(c -> c.validateAllFields());
+
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+        List<ClientModel> clientList = null;
+
+
+        try {
+            clientList = Arrays.asList(mapper.readValue(new File(LINK_FILE), ClientModel[].class));
+            newClientsList.forEach(c -> {
+                if(this.idExists(c.getClientId())) {
+                    throw new ClientAlreadyExistsException("Client already exists!");
+                }
+            });
+            List<ClientModel> copyList = new ArrayList<>(clientList);
+            copyList.addAll(newClientsList);
+            writer.writeValue(new File(LINK_FILE), copyList);
+        } catch(ClientAlreadyExistsException ex) {
+            throw ex;
+        } catch (Exception ex) {
+            throw new InvalidServerException("Internal server error");
+        }
+    }
+
     public Boolean idExists(Long productId) {
         List<ClientModel> productsList = this.getClients();
         ClientModel product = productsList.stream()
@@ -49,30 +75,6 @@ public class ClientRepository {
             return false;
         } else {
             return true;
-        }
-    }
-
-    public void createClients (List<ClientModel> newClientsList){
-        ObjectMapper mapper = new ObjectMapper();
-        ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
-
-        List<ClientModel> clientList = null;
-
-        try {
-            clientList = Arrays.asList(mapper.readValue(new File(LINK_FILE), ClientModel[].class));
-            newClientsList.forEach(c -> {
-                if(this.idExists(c.getClientId())) {
-                    throw new ClientAlreadyExistsException("Client already exists!");
-                }
-            });
-
-            List<ClientModel> copyList = new ArrayList<>(clientList);
-            copyList.addAll(newClientsList);
-            writer.writeValue(new File(LINK_FILE), copyList);
-        } catch(ClientAlreadyExistsException ex) {
-            throw ex;
-        } catch (Exception ex) {
-            throw new InvalidServerException("Internal server error");
         }
     }
 }
