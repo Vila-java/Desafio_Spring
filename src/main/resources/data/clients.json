@@ -17,48 +17,12 @@
   "emailAddress" : "matheus@gmail.com",
   "state" : "Brasília"
 }, {
-  "clientId" : 2,
+  "clientId" : 4,
   "name" : "Joaninha",
   "phoneNumber" : "619857746588",
   "emailAddress" : "matheus@gmail.com",
   "state" : "São Paulo"
-}, {
-  "clientId" : 30,
-  "name" : null,
-  "phoneNumber" : "619857746588",
-  "emailAddress" : "matheus@gmail.com",
-  "state" : "Brasília"
-}, {
-  "clientId" : 800,
-  "name" : null,
-  "phoneNumber" : "619857746588",
-  "emailAddress" : "matheus@gmail.com",
-  "state" : "Brasília"
-}, {
-  "clientId" : 88,
-  "name" : "Raimundo",
-  "phoneNumber" : "619857746588",
-  "emailAddress" : "matheus@gmail.com",
-  "state" : "Brasília"
-}, {
-  "clientId" : 88888,
-  "name" : null,
-  "phoneNumber" : "619857746588",
-  "emailAddress" : "matheus@gmail.com",
-  "state" : "Brasília"
-}, {
-  "clientId" : 888889,
-  "name" : null,
-  "phoneNumber" : "619857746588",
-  "emailAddress" : "matheus@gmail.com",
-  "state" : "Brasília"
-}, {
-  "clientId" : 89,
-  "name" : null,
-  "phoneNumber" : "619857746588",
-  "emailAddress" : "matheus@gmail.com",
-  "state" : "Brasília"
-}, {
+},{
   "clientId" : 88888933,
   "name" : "João",
   "phoneNumber" : "619857746588",
