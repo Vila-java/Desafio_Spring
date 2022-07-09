@@ -10,7 +10,7 @@ Este é um projeto proposto pela Digital House no Bootcamp IT Java 6 que visa a 
 A aplicação consiste no desenvolvimento de uma API para fazer o cadastro de produtos, operação de compra e visualização dos produtos com determinados filtros e ordenações utilizando os métodos POST e GET do HTTP.
 
 
-### Funcionalidades da Aplicação Produto
+### Funcionalidades do Produto
 
 1. Cadastrar uma lista de produtos
 
@@ -41,7 +41,7 @@ A aplicação consiste no desenvolvimento de uma API para fazer o cadastro de pr
 7. Envio de pedido de compra
 
 
-### Funcionalidades da Aplicação Cliente
+### Funcionalidades do Cliente
 
 1. Cadastrar uma lista de clientes, não permitindo o cadastro de um cliente já existente
 
